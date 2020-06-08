@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="connection">
+        <label for="username">Username</label><input id="username" value="" name="username" type="text">
+        <input type="button" value="Connect" onclick="connect()" id="connect">
+    </div>
+
+    <div id="call" class="hidden">
+        <label for="remoteUser">Call</label><input id="remoteUser" value="" name="remoteUser" type="text">
+        <input type="button" value="Call" onclick="call(document.getElementById('remoteUser').value)" id="connect">
+    </div>
+    <video width="640" height="480" autoplay style="display: inline;" id="remoteVideo"></video>
+    <video width="320" height="240" autoplay muted style="display: inline;" id="localVideo"></video>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
