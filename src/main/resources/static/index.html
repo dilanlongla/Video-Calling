@@ -14,12 +14,12 @@
 
 <body>
     <div id="connection">
-        <label for="username">Username</label><input id="username" value="" name="username" type="text">
+        <label for="username">Username</label><input id="username" value="" name="username" type="text" placeholder="Your username">
         <input type="button" value="Connect" onclick="connect()" id="connect">
     </div>
 
     <div id="call" class="hidden">
-        <label for="remoteUser">Call</label><input id="remoteUser" value="" name="remoteUser" type="text">
+        <label for="remoteUser">Call</label><input id="remoteUser" value="" name="remoteUser" type="text" placeholder="Remote username"
         <input type="button" value="Call" onclick="call(document.getElementById('remoteUser').value)" id="connect">
     </div>
     <video width="640" height="480" autoplay style="display: inline;" id="remoteVideo"></video>
