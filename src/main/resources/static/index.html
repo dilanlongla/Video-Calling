@@ -9,16 +9,6 @@
         .hidden {
             display: none;
         }
-        .videobox{
-            background-color: black;
-            opacity: .8;
-            margin-top: 5%;
-        }
-        #localVideo {
-            margin-bottom: 30px;
-            opacity: .8;
-            margin-left: -190px;
-        }
     </style>
 </head>
 
@@ -32,8 +22,8 @@
         <label for="remoteUser">Call</label><input id="remoteUser" value="" name="remoteUser" type="text" placeholder="Remote username"
         <input type="button" value="Call" onclick="call(document.getElementById('remoteUser').value)" id="connect">
     </div>
-    <video class="videobox" width="640" height="480" autoplay id="remoteVideo"></video>
-    <video class="videobox" width="160" height="160" autoplay muted id="localVideo"></video>
+    <video width="640" height="480" autoplay style="display: inline;" id="remoteVideo"></video>
+    <video width="320" height="240" autoplay muted style="display: inline;" id="localVideo"></video>
 
     <script src="main.js"></script>
 </body>
