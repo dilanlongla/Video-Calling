@@ -61,6 +61,7 @@ function connect() {
         //called when an error occures
         sock.onerror = function(e) {
             console.log('error', e);
+            console.log("Couldn't place call, Please try again");
         }
 
         //called on message reception by the client
