@@ -182,10 +182,10 @@ document.getElementById("dropCall").addEventListener('click', () =>{
     pc.close();
     pc = null;
     document.getElementById("dropCall").disabled = true;
-    mediaConstraints = {
-        audio: false, // We stop audio track
-        video: false // ...and stop video track
-    };
+    localStream.getTracks().forEach(function(track) {
+        track.stop();
+      });
+      
 });
 
 
