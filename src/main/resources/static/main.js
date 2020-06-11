@@ -173,3 +173,16 @@ function logError(error) {
 function sendMessage(payload) {
     sock.send(JSON.stringify(payload));
 }
+
+
+// Contains functions for Mute mic, Disable camera and hang up call.
+
+document.getElementById("dropCall").addEventListener('click', () =>{
+    console.log("Hanging up...");
+    pc.close();
+    pc = null;
+    document.getElementById("dropCall").disabled = true;
+});
+
+
+
